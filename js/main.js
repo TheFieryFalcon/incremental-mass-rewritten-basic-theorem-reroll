@@ -835,3 +835,11 @@ function capitalFirst(str) {
 		.map(x => x[0].toUpperCase() + x.slice(1))
 		.join(" ");
 }
+if (player.inf.reached == true) {
+	document.addEventListener('keydown', function(event) {
+    		const key = event.key;
+		if (key == "F") {
+			generatePreTheorems();
+		}
+	});
+}
