@@ -1,5 +1,6 @@
 const INF = {
     doReset() {
+	generatePreTheorems()
         player.inf.reached = false
         player.mass = E(0)
 
@@ -25,7 +26,7 @@ const INF = {
 
         e = []
         
-        //for (let i = 0; i < player.atom.muonic_el.length; i++) if (MUONIC_ELEM.upgs[player.atom.muonic_el[i]].cs) e.push(player.atom.muonic_el[i])
+        for (let i = 0; i < player.atom.muonic_el.length; i++) if (MUONIC_ELEM.upgs[player.atom.muonic_el[i]].cs) e.push(player.atom.muonic_el[i])
 
         player.atom.muonic_el = e
         for (let x = 1; x <= (hasElement(229) ? 15 : 16); x++) player.chal.comps[x] = E(0)
@@ -180,8 +181,6 @@ const INF = {
         updateTemp()
 
         player.inf.pt_choosed=-1
-
-        generatePreTheorems()
 
         for (let i = 0; i < GAL_PRESTIGE.res_length; i++) player.gp_resources[i] = E(0)
 
